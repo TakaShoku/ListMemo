@@ -7,10 +7,19 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     @IBOutlet weak var tableView: UITableView!
+    
+    // Realmインスタンスを取得する
+    let realm = try! Realm()
+    
+    // DB内のタスクが格納されるリスト。
+    // 日付近い順\順でソート：降順
+    // 以降内容をアップデートするとリスト内は自動的に更新される。
+    var listArray = try! Realm().objects(List.self).sorted(byKeyPath: "date", ascending: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
