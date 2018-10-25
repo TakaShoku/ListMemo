@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09A873FEBD0031791BCC2BC7 /* Pods_ListMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAE127329C473FEB08E0A9B /* Pods_ListMemo.framework */; };
 		AB148CC9217F2047004EEA9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB148CC8217F2047004EEA9A /* AppDelegate.swift */; };
 		AB148CCB217F2047004EEA9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB148CCA217F2047004EEA9A /* ViewController.swift */; };
 		AB148CCE217F2047004EEA9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB148CCC217F2047004EEA9A /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		AB148CDE217F2049004EEA9A /* ListMemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB148CDD217F2049004EEA9A /* ListMemoTests.swift */; };
 		AB148CE9217F2049004EEA9A /* ListMemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB148CE8217F2049004EEA9A /* ListMemoUITests.swift */; };
 		AB148CF721807961004EEA9A /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB148CF621807961004EEA9A /* InputViewController.swift */; };
+		ABDCE9582181D7DC00E62C79 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDCE9572181D7DC00E62C79 /* List.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EAE127329C473FEB08E0A9B /* Pods_ListMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CFB01B9C0706F354301D25A /* Pods-ListMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListMemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ListMemo/Pods-ListMemo.debug.xcconfig"; sourceTree = "<group>"; };
 		AB148CC5217F2047004EEA9A /* ListMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB148CC8217F2047004EEA9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB148CCA217F2047004EEA9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		AB148CE8217F2049004EEA9A /* ListMemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMemoUITests.swift; sourceTree = "<group>"; };
 		AB148CEA217F2049004EEA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB148CF621807961004EEA9A /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		ABDCE9572181D7DC00E62C79 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		C5875A188FBCC050011B81B6 /* Pods-ListMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListMemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ListMemo/Pods-ListMemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09A873FEBD0031791BCC2BC7 /* Pods_ListMemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09065F6F684DBFE33C2F2125 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EAE127329C473FEB08E0A9B /* Pods_ListMemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		606C2D3A0BE35E1462DD3A37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CFB01B9C0706F354301D25A /* Pods-ListMemo.debug.xcconfig */,
+				C5875A188FBCC050011B81B6 /* Pods-ListMemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AB148CBC217F2047004EEA9A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +107,8 @@
 				AB148CDC217F2049004EEA9A /* ListMemoTests */,
 				AB148CE7217F2049004EEA9A /* ListMemoUITests */,
 				AB148CC6217F2047004EEA9A /* Products */,
+				606C2D3A0BE35E1462DD3A37 /* Pods */,
+				09065F6F684DBFE33C2F2125 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +132,7 @@
 				AB148CCF217F2049004EEA9A /* Assets.xcassets */,
 				AB148CD1217F2049004EEA9A /* LaunchScreen.storyboard */,
 				AB148CD4217F2049004EEA9A /* Info.plist */,
+				ABDCE9572181D7DC00E62C79 /* List.swift */,
 			);
 			path = ListMemo;
 			sourceTree = "<group>";
@@ -135,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB148CED217F2049004EEA9A /* Build configuration list for PBXNativeTarget "ListMemo" */;
 			buildPhases = (
+				8305FCB1E7E92BA418942DFA /* [CP] Check Pods Manifest.lock */,
 				AB148CC1217F2047004EEA9A /* Sources */,
 				AB148CC2217F2047004EEA9A /* Frameworks */,
 				AB148CC3217F2047004EEA9A /* Resources */,
+				07962508BA511F6B91196BF5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,12 +283,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07962508BA511F6B91196BF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ListMemo/Pods-ListMemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ListMemo/Pods-ListMemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8305FCB1E7E92BA418942DFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ListMemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AB148CC1217F2047004EEA9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AB148CF721807961004EEA9A /* InputViewController.swift in Sources */,
+				ABDCE9582181D7DC00E62C79 /* List.swift in Sources */,
 				AB148CCB217F2047004EEA9A /* ViewController.swift in Sources */,
 				AB148CC9217F2047004EEA9A /* AppDelegate.swift in Sources */,
 			);
@@ -434,6 +505,7 @@
 		};
 		AB148CEE217F2049004EEA9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CFB01B9C0706F354301D25A /* Pods-ListMemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +524,7 @@
 		};
 		AB148CEF217F2049004EEA9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5875A188FBCC050011B81B6 /* Pods-ListMemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
