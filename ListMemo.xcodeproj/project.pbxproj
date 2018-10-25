@@ -14,6 +14,7 @@
 		AB148CD3217F2049004EEA9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB148CD1217F2049004EEA9A /* LaunchScreen.storyboard */; };
 		AB148CDE217F2049004EEA9A /* ListMemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB148CDD217F2049004EEA9A /* ListMemoTests.swift */; };
 		AB148CE9217F2049004EEA9A /* ListMemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB148CE8217F2049004EEA9A /* ListMemoUITests.swift */; };
+		AB148CF721807961004EEA9A /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB148CF621807961004EEA9A /* InputViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		AB148CE4217F2049004EEA9A /* ListMemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListMemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB148CE8217F2049004EEA9A /* ListMemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMemoUITests.swift; sourceTree = "<group>"; };
 		AB148CEA217F2049004EEA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB148CF621807961004EEA9A /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				AB148CC8217F2047004EEA9A /* AppDelegate.swift */,
 				AB148CCA217F2047004EEA9A /* ViewController.swift */,
+				AB148CF621807961004EEA9A /* InputViewController.swift */,
 				AB148CCC217F2047004EEA9A /* Main.storyboard */,
 				AB148CCF217F2049004EEA9A /* Assets.xcassets */,
 				AB148CD1217F2049004EEA9A /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB148CF721807961004EEA9A /* InputViewController.swift in Sources */,
 				AB148CCB217F2047004EEA9A /* ViewController.swift in Sources */,
 				AB148CC9217F2047004EEA9A /* AppDelegate.swift in Sources */,
 			);
@@ -433,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XM2GBYYLV;
 				INFOPLIST_FILE = ListMemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XM2GBYYLV;
 				INFOPLIST_FILE = ListMemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
