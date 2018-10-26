@@ -73,6 +73,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let inputViewController:InputViewController = segue.destination as! InputViewController
+        
+        if segue.identifier == "cellSegue" {
+            let indexPath = self.tableView.indexPathForSelectedRow
+            inputViewController.list = listArray[indexPath!.row]
+        } else {
+            let list = List()
+            list.date = Date()
+            
+            let allLists = realm.objects(List.self)
+            if allLists.count != 0 {
+                list.id = allLists.max(ofProperty: "id")! + 1
+            }
+            
+            inputViewController.list = list
+        }
+    }
 
 
 }
