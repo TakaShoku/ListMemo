@@ -17,11 +17,22 @@ class InputViewController: UIViewController {
     var list: List
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        背景をタップしたらdismissKeyboardメソッドを呼ぶように設定する
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(dismisskeyboard))
+        self.view.addGestureRecognizer(tapGesture)
+        
+        titleTextField.text = list.title
+        contentsTextView.list = list.contents
+        datePicker.date = list.date
 
         // Do any additional setup after loading the view.
     }
     
-
+    @objc func dismisskeyboard() {
+//        キーボードを閉じる
+        view.endEditing(true)
+    }
     /*
     // MARK: - Navigation
 
