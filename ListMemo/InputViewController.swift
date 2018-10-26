@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class InputViewController: UIViewController {
 
@@ -14,7 +15,10 @@ class InputViewController: UIViewController {
     @IBOutlet weak var contentsTextView: UITextView!
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    var list: List
+    
+    var list: List!
+    let realm = try! Realm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +27,7 @@ class InputViewController: UIViewController {
         self.view.addGestureRecognizer(tapGesture)
         
         titleTextField.text = list.title
-        contentsTextView.list = list.contents
+        contentsTextView.text = list.contents
         datePicker.date = list.date
 
         // Do any additional setup after loading the view.
@@ -32,6 +36,18 @@ class InputViewController: UIViewController {
     @objc func dismisskeyboard() {
 //        キーボードを閉じる
         view.endEditing(true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        try! realm.write {
+            self.list.title = self.titleTextField.text!
+            self.list.contents = self.contentsTextView.text
+            self.list.date = self.datePicker.date
+            self.realm.add(self.list, update: true)
+            
+        }
+        
+        super.viewWillDisappear(animated)
     }
     /*
     // MARK: - Navigation
