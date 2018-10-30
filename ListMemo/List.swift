@@ -21,6 +21,9 @@ class List: Object {
     /// 日時
     @objc dynamic var date = Date()
     
+//    カテゴリー（追加プロパティ）
+    @objc dynamic var category: String = ""
+    
     /**
      id をプライマリーキーとして設定
      */

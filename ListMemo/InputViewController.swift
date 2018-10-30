@@ -15,6 +15,7 @@ class InputViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentsTextView: UITextView!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var categoryTextField: UITextField!
     
     
     var list: List!
@@ -30,6 +31,7 @@ class InputViewController: UIViewController {
         titleTextField.text = list.title
         contentsTextView.text = list.contents
         datePicker.date = list.date
+        categoryTextField.text = list.category
 
         // Do any additional setup after loading the view.
     }
@@ -44,6 +46,7 @@ class InputViewController: UIViewController {
             self.list.title = self.titleTextField.text!
             self.list.contents = self.contentsTextView.text
             self.list.date = self.datePicker.date
+            self.list.category = self.categoryTextField.text!
             self.realm.add(self.list, update: true)
             
         }
@@ -68,6 +71,12 @@ class InputViewController: UIViewController {
             content.body = "(内容なし)"
         } else {
             content.body = list.contents
+        }
+        
+        if list.category == "" {
+            content.title = "(タイトルなし)"
+        } else {
+            content.title = list.category
         }
         
         content.sound = UNNotificationSound.default
