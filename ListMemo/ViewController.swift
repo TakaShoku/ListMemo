@@ -110,6 +110,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
     
+//    キャンセルボタンが押された時に呼ばれる
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        print("searchBarCancelButtonClicked")
+        searchBar.showsCancelButton = false
+        self.view.endEditing(true)
+        searchBar.text = ""
+        tableView.reloadData()
+    }
+    
+    // テキストフィールド入力開始前に呼ばれる
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        print("searchBarShouldBeginEditing")
+        searchBar.showsCancelButton = true
+        return true
+    }
+    
     //    segue で画面遷移するに呼ばれる
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let inputViewController:InputViewController = segue.destination as! InputViewController
