@@ -10,9 +10,10 @@ import UIKit
 import RealmSwift
 import UserNotifications
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
     @IBOutlet weak var tableView: UITableView!
+    var searchBar = UISearchBar()
     
     // Realmインスタンスを取得する
     let realm = try! Realm()
@@ -22,17 +23,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // 以降内容をアップデートするとリスト内は自動的に更新される。
     var listArray = try! Realm().objects(List.self).sorted(byKeyPath: "date", ascending: false)
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        searchBar = UISearchBar()
+        searchBar.delegate = self as UISearchBarDelegate
+        searchBar.frame = CGRect(x:0, y:0, width:self.view.frame.width, height:42)
+        searchBar.layer.position = CGPoint(x: self.view.bounds.width/2, y: 89)
+        searchBar.searchBarStyle = UISearchBar.Style.default
+        searchBar.showsSearchResultsButton = false
+        searchBar.placeholder = "検索"
+        searchBar.setValue("キャンセル", forKey: "_cancelButtonText")
+        searchBar.tintColor = UIColor.red
+        
+        tableView.tableHeaderView = searchBar
+        
+        
     }
+    
     
     //    セルの数を返すメソッド
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listArray.count
+            return listArray.count
     }
     
     //    各セルの内容を返すえメッソド
@@ -40,16 +57,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //        再利用可能なcellを得る
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-//        Cellに値を設定する.
-        let list = listArray[indexPath.row]
-        cell.textLabel?.text = list.title
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm"
-        
-        let dateString: String = formatter.string(from: list.date)
-        cell.detailTextLabel?.text = dateString
-        
+            //        Cellに値を設定する.
+            let list = listArray[indexPath.row]
+            cell.textLabel?.text = list.title
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd HH:mm"
+            
+            let dateString: String = formatter.string(from: list.date)
+            cell.detailTextLabel?.text = dateString
+    
         return cell
     }
     
